@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Bookmark, ExternalLink, Check, X, Clock, MapPin, Globe, Calendar } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
-import { getGrant, formatAmount, deadlineLabel, deadlineColor, TOPIC_META } from "@/lib/utils";
+import { formatAmount, deadlineLabel, deadlineColor, TOPIC_META } from "@/lib/utils";
 import { getGrant as fetchGrant } from "@/lib/api";
 
 export default async function GrantPage({ params }: { params: { id: string } }) {
