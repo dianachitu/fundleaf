@@ -141,7 +141,7 @@ export default async function GrantPage({ params }: { params: { id: string } }) 
               {[
                 ["Sumă", formatAmount(grant.amount_min, grant.amount_max)],
                 ["Co-finanțare", grant.cofinancing_pct ? `${grant.cofinancing_pct}% UE` : "—"],
-                ["Durată", grant.duration_months_min ? `${grant.duration_months_min}–${grant.duration_months_max ?? "?"} luni` : "—"],
+                ["Durată", (grant as any).duration_months_min ? `${(grant as any).duration_months_min}–${(grant as any).duration_months_max ?? "?"} luni` : "—"],
                 ["Eligibilitate", grant.eligible_countries?.join(", ") || "Global"],
                 ["Limbă", grant.language?.join(", ") || "EN"],
               ].map(([label, value]) => (
